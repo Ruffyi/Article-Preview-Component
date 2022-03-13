@@ -1,0 +1,19 @@
+.author {
+	height: 5rem;
+	margin-top: 2rem;
+	@include flex-mother(row, center, flex-start);
+	&__image {
+		.img {
+			border-radius: 50%;
+		}
+		width: 4rem;
+	}
+	&__information {
+		flex-grow: 1;
+		margin-left: 2rem;
+	}
+	&__name {
+		font-size: 1.3rem;
+		color: map-get($colors, 'clr-very-dark-grayish-blue');
+	}
+}

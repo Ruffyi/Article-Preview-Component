@@ -4,3 +4,9 @@
 	align-items: $alignItems;
 	justify-content: $justifyContent;
 }
+
+@mixin mq($media) {
+	@media (max-width: $media) {
+		@content;
+	}
+}

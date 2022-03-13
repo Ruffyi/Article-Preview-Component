@@ -1,0 +1,11 @@
+.socials {
+	border-radius: 50%;
+	background-color: map-get($colors, 'clr-light-grayish-blue');
+	&__btn {
+		padding: 0.5rem;
+		border: none;
+		cursor: pointer;
+		z-index: 1;
+		background-color: transparent;
+	}
+}
