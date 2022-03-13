@@ -1,11 +1,46 @@
 .socials {
+	position: relative;
 	border-radius: 50%;
 	background-color: map-get($colors, 'clr-light-grayish-blue');
+	@include mq(48rem) {
+		position: static;
+	}
 	&__btn {
+		position: relative;
 		padding: 0.5rem;
 		border: none;
 		cursor: pointer;
-		z-index: 1;
 		background-color: transparent;
+		@include mq(48rem) {
+			z-index: 999;
+			padding: 1rem;
+		}
+	}
+	&__items {
+		@include flex-mother(row, center, space-around);
+		@include positioning(absolute, -150%, 0, true);
+		display: none;
+		padding: 1rem 2rem;
+		background-color: map-get($colors, 'clr-very-dark-grayish-blue');
+		border-radius: 1rem;
+		@include mq(48rem) {
+			width: 100%;
+			justify-content: flex-start;
+			top: 0;
+			transform: translate(0, 0);
+		}
+		.social__item {
+			margin: 0 0.5rem;
+			@include mq(48rem) {
+				margin: 0 1rem;
+			}
+		}
+	}
+	&__title {
+		margin: 0 1rem;
+		color: map-get($colors, 'clr-desaturated-dark-blue');
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 1.1rem;
 	}
 }

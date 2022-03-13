@@ -1,3 +1,11 @@
 .filter {
-	filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1) !important;
+}
+
+.active {
+	background-color: map-get($colors, 'clr-very-dark-grayish-blue') !important;
+}
+
+.show {
+	display: flex !important;
 }

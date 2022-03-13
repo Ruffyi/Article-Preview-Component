@@ -10,3 +10,16 @@
 		@content;
 	}
 }
+
+@mixin positioning($position: absolute, $top: 0, $left: 0, $transform: false) {
+	@if ($transform) {
+		position: $position;
+		top: $top;
+		left: $left;
+		transform: translate(-50%, -50%);
+	} @else {
+		position: $position;
+		top: $top;
+		left: $left;
+	}
+}
